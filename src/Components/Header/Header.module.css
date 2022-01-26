@@ -1,0 +1,26 @@
+.header {
+  background-color: #422ed4;
+  height: 59px;
+}
+
+.logoBox {
+  padding-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 43px;
+  height: 43px;
+}
+
+.titleName {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.headerContainer {
+  margin: auto;
+}
