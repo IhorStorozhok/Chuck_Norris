@@ -8,19 +8,20 @@ console.log(s);
 const Header = () => {
   const [logo, setLogo] = useState("");
   const [status, setStatus] = useState("idle");
-  //starting upload
+  // starting upload
 
-  //useEffect(() => {
-  // getRandomJoke().then((data) => {
-  //   setLogo(data.icon_url);
-  //   setStatus("resolved");
-  // });
-  // .catch((e) => {
-  //   console.log(e);
+  useEffect(() => {
+    getRandomJoke()
+      .then((data) => {
+        setLogo(data.icon_url);
+        setStatus("resolved");
+      })
+      .catch((e) => {
+        console.log(e);
 
-  //   setStatus("rejected");
-  // });
-  //}, [logo, status]);
+        setStatus("rejected");
+      });
+  }, [logo, status]);
 
   return (
     <header className={s.header}>
