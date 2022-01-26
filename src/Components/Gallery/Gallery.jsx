@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import s from "./Gallery.module.css";
 import { getCategories } from "../Api";
 
-const Gallery = () => {
+const Gallery = ({ onChoseCategory }) => {
   const [galleryArr, setGalleryArr] = useState([]);
   const [status, setStatus] = useState("idle");
-  const [changedCategory, setChangedCategory] = useState("");
+  //   const [changedCategory, setChangedCategory] = useState("");
 
   useEffect(() => {
     getCategories().then((data) => {
@@ -19,28 +19,24 @@ const Gallery = () => {
     //   });
   }, []);
 
-  function onChoseCategory(e) {
-    console.log(e.currentTarget.innerHTML);
-    setChangedCategory(e.currentTarget.innerHTML);
-  }
+  //   function onChoseCategory(e) {
+  //     console.log(e.currentTarget.innerHTML);
+  //     setChangedCategory(e.target.innerHTML);
+  //   }
 
   return (
-    <div className="container">
-      <h2>Categories</h2>
-      <ul>
-        {status === "resolved" ? (
-          galleryArr.map((c) => {
-            return (
-              <li key={c}>
-                <div className={s.categoryButton} onClick={onChoseCategory}>
-                  {c}
-                </div>
-              </li>
-            );
-          })
-        ) : (
-          <li>category</li>
-        )}
+    <div className="container galleryContainer">
+      <h2 className={s.galleryTitle}>Categories</h2>
+      <ul className={s.categoriesList}>
+        {galleryArr.map((c) => {
+          return (
+            <li key={c} className={s.categoriesListItem}>
+              <div className={s.categoryButton} onClick={onChoseCategory}>
+                <p className={s.categoryButtonText}>{c}</p>
+              </div>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

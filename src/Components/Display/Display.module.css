@@ -1,0 +1,37 @@
+.displayForQuote {
+  background-color: #422ed4;
+  min-width: 1120px;
+  min-height: 162px;
+  text-overflow: ellipsis;
+  border-radius: 25px;
+  box-shadow: 0px 100px 80px rgba(80, 76, 103, 0.07),
+    0px 0px 10.0172px rgba(80, 76, 103, 0.035);
+
+  position: relative;
+}
+.quote {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  margin-left: 10px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+  padding: 24px;
+  font-style: normal;
+}
+.chukImgThumb {
+  display: inline-block;
+  width: 122px;
+  height: 258px;
+  border: 0;
+  background-image: url(../../Images/ChuckImg.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: calc(0% - 153px);
+  left: calc(100% - 122px - 24px);
+  cursor: pointer;
+  z-index: -1;
+}

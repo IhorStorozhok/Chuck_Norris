@@ -17,8 +17,6 @@ const Header = () => {
         setStatus("resolved");
       })
       .catch((e) => {
-        console.log(e);
-
         setStatus("rejected");
       });
   }, [logo, status]);
