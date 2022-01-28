@@ -1,6 +1,6 @@
 .displayForQuote {
   background-color: #422ed4;
-  min-width: 1120px;
+  max-width: 1120px;
   min-height: 162px;
   text-overflow: ellipsis;
   border-radius: 25px;
@@ -34,4 +34,9 @@
   left: calc(100% - 122px - 24px);
   cursor: pointer;
   z-index: -1;
+}
+@media screen and (max-width: 960px) {
+  .displayForQuote {
+    margin-top: 152px;
+  }
 }

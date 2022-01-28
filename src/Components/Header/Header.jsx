@@ -3,8 +3,6 @@ import { getRandomJoke } from "../Api";
 
 import s from "./Header.module.css";
 
-console.log(s);
-
 const Header = () => {
   const [logo, setLogo] = useState("");
   const [status, setStatus] = useState("idle");

@@ -27,9 +27,18 @@
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+
+  filter: drop-shadow(0px 22px 80px rgba(72, 70, 106, 0.07))
+    drop-shadow(0px 2.75474px 10.0172px rgba(72, 70, 106, 0.035));
 }
 
 .categoryButton:hover {
+  background-color: #422ed4;
+  color: #ffffff;
+}
+.categoryButton:focus {
   background-color: #422ed4;
   color: #ffffff;
 }

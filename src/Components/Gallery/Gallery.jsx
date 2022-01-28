@@ -5,24 +5,19 @@ import { getCategories } from "../Api";
 const Gallery = ({ onChoseCategory }) => {
   const [galleryArr, setGalleryArr] = useState([]);
   const [status, setStatus] = useState("idle");
-  //   const [changedCategory, setChangedCategory] = useState("");
 
   useEffect(() => {
-    getCategories().then((data) => {
-      setGalleryArr(data);
-      setStatus("resolved");
-    });
-    //   .catch((e) => {
-    //     console.log(e);
+    getCategories()
+      .then((data) => {
+        setGalleryArr(data);
+        setStatus("resolved");
+      })
+      .catch((e) => {
+        console.log(e);
 
-    //     setStatus("rejected");
-    //   });
+        setStatus("rejected");
+      });
   }, []);
-
-  //   function onChoseCategory(e) {
-  //     console.log(e.currentTarget.innerHTML);
-  //     setChangedCategory(e.target.innerHTML);
-  //   }
 
   return (
     <div className="container galleryContainer">
